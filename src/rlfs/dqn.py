@@ -111,7 +111,7 @@ class DQNAgent:
         loss.backward()
         torch.nn.utils.clip_grad_norm_(self.q.parameters(), self.cfg.max_grad_norm)
         self.opt.step()
-        return float(loss)
+        return loss.item()
 
 
 def train_dqn(cfg: DQNConfig) -> tuple[DQNAgent, History]:
