@@ -5,3 +5,4 @@ __pycache__/
 runs/
 *.pt
 .venv/
+benchmarks/logs/
